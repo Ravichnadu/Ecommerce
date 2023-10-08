@@ -23,6 +23,9 @@ public class EcommerceApplication implements CommandLineRunner {
     public void run(String...args) throws Exception {
         System.out.println("Application Started !!");
         addproduct();
+      //  readProduct();
+       // updateName();
+       // deleteproduct();
     }
 
 	public void addproduct()
@@ -37,4 +40,28 @@ public class EcommerceApplication implements CommandLineRunner {
 		
 		serviceImp.addProduct(dto);
 	}
+	
+	public void readProduct()
+	{
+		Integer id=2;
+		
+		EcommerceDto dto=serviceImp.readProduct(id);
+		
+		System.out.println(dto);
+	 }
+	
+	public void updateName()
+	{
+		EcommerceDto dto=new EcommerceDto();
+        dto.setName("samsung");
+		System.out.println(serviceImp.updateProduct(dto,1));
+		
+		
+	}
+	public void deleteproduct()
+	{
+		Integer id=1;
+		serviceImp.deleteProduct(id);
+	}
+		
 }

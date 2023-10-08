@@ -1,5 +1,4 @@
 drop schema if exists product_ms;
-
 create schema product_ms;
 
 use product_ms;

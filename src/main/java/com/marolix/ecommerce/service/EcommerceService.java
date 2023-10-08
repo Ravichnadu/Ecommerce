@@ -4,5 +4,9 @@ import com.marolix.ecommerce.dto.EcommerceDto;
 
 public interface EcommerceService {
 
-	public abstract String addProduct(EcommerceDto dto);
+	public  String addProduct(EcommerceDto dto);
+	public EcommerceDto readProduct(Integer id);
+	public String updateProduct(EcommerceDto dto,Integer id );
+	
+	public String deleteProduct(Integer id);
 }
